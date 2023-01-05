@@ -92,13 +92,11 @@ bgGradient.locations = [
 bgGradient.startPoint = new Point(0.5, 0.0)
 bgGradient.endPoint = new Point(0.5, 1.0)
 LW.backgroundGradient = bgGradient
-//LW.addSpacer(20)
 
 let titleStack = mainColumn.addStack()
 titleStack.layoutHorizontally()
 titleStack.centerAlignContent()
 titleStack.size = new Size(wdgtSize, 76)
-//titleStack.centerAlignContent()
 
 let title = titleStack.addText('App Wishlist')
 title.centerAlignText()
@@ -128,16 +126,6 @@ hrGradient.startPoint = new Point(0.5, -0.0)
 hrGradient.endPoint = new Point(0.5, 1.0)
 hr.backgroundGradient = hrGradient
 
-/**
-let rowsStack = mainColumn.addStack()
-rowsStack.layoutVertically()
-rowsStack.centerAlignContent()
-rowsStack.size = new Size(wdgtSize-54, 252)
-rowsStack.borderWidth = 2
-rowsStack.borderColor = Color.white()
-rowsStack.cornerRadius = 5
-**/
-
 //rowsStack.addSpacer(10)
 let rowWidth = wdgtSize - 10
 let rowHeight = 91 + 30
@@ -166,14 +154,14 @@ let iconStack
 // create placeholder icon for image
 function drawImgPlaceholderIcon(){
 	let ctxLg = new DrawContext()
-	ctxLg.size = new Size(66, 66)
+	ctxLg.size = new Size(64, 64)
 	ctxLg.setFillColor(new Color('#2ECD60'))
 	ctxLg.setStrokeColor(new Color('#2ECD6000'))
 	ctxLg.setLineWidth(0)
 	
 	let rndRectBig = new Path()
 	rndRectBig.move(new Point(0, 0))
-	rndRectBig.addRoundedRect(new Rect(0, 0, 66, 66), 18, 18)
+	rndRectBig.addRoundedRect(new Rect(0, 0, 64, 64), 16, 16)
 	ctxLg.addPath(rndRectBig)
 	ctxLg.fillPath()
 	ctxLg.setFillColor(new Color('#FFFFFF00'))
@@ -181,37 +169,18 @@ function drawImgPlaceholderIcon(){
 	ctxLg.setLineWidth(2)
 	
 	let horizontalLine = new Path()
-	horizontalLine.move(new Point(15, 33))
-	horizontalLine.addLine(new Point(51, 33))
+	horizontalLine.move(new Point(20, 32))
+	horizontalLine.addLine(new Point(44, 32))
 	ctxLg.addPath(horizontalLine)
 	ctxLg.strokePath()
 	
 	let verticalLine = new Path()
-	verticalLine.move(new Point(33, 15))
-	verticalLine.addLine(new Point(33, 51))
+	verticalLine.move(new Point(32, 20))
+	verticalLine.addLine(new Point(32, 44))
 	ctxLg.addPath(verticalLine)
 	ctxLg.strokePath()
 	
 	return ctxLg.getImage()
-}
-
-// create an empty placeholder icon
-function drawBlankIcon(w, h){
-	let ctx = new DrawContext()
-	ctx.size = new Size(w, h)
-	ctx.setFillColor(COLOR6)
-	ctx.setStrokeColor(new Color('#041E9400'))
-	ctx.setLineWidth(0)
-	
-	let iconBG = new Path()
-	iconBG.move(new Point(0, 0))
-	iconBG.addRoundedRect(new Rect(0, 0, w, h), 0, 0)
-	ctx.addPath(iconBG)
-	ctx.fillPath()
-	ctx.addPath(iconBG)
-	ctx.strokePath()
-	
-	return ctx.getImage()
 }
 
 // create a placeholder icon for the remove button
@@ -228,14 +197,14 @@ function drawBtnPlaceholderIcon(){
 	ctxSm.fillPath()
 	ctxSm.setFillColor(new Color('#041E94'))
 	ctxSm.setStrokeColor(new Color('#BBBBBB75'))
-	ctxSm.setLineWidth(3)
+	ctxSm.setLineWidth(4)
 	let rndRectSmall = new Path()
 	rndRectSmall.move(new Point(0, 0))
 	rndRectSmall.addRoundedRect(new Rect(0, 0, 20, 20), 3, 3)
 	ctxSm.addPath(rndRectSmall)
 	ctxSm.strokePath()
 	ctxSm.setStrokeColor(new Color('#BBBBBB75'))
-	ctxSm.setLineWidth(1.5)
+	ctxSm.setLineWidth(2)
 	
 	let forwardSlash = new Path()
 	forwardSlash.move(new Point(6, 6))
@@ -268,43 +237,27 @@ do {
 	}
 	rowItem = row.addStack()
 	rowItem.layoutVertically()
-	//rowItem.setPadding(20, 0, 0, 0)
 	rowItem.topAlignContent()
 	rowItem.size = new Size(rowItemWidth, rowItemHeight)
 	if(i > appsData.length - 1){
 		// if the iteration index is a number longer than the number of existing wishlist entries, then add a placeholder
 		imgPlaceholderIcon = drawImgPlaceholderIcon()
 		imgPlaceholder = rowItem.addImage(imgPlaceholderIcon)
-		
-		/**
-		placeholderIcon = SFSymbol.named('plus.square.fill')
-		placeholderIcon.textColor = Color.white()
-		placeholderIcon.applyUltraLightWeight()
-		placeholderImg = rowItem.addImage(placeholderIcon.image)
-		**/
+		rowItem.setPadding(-2, 0, 0, 0)
 
 		imgPlaceholder.applyFittingContentMode()
 		imgPlaceholder.centerAlignImage()
-		imgPlaceholder.cornerRadius = 18
-		imgPlaceholder.imageSize = new Size(66,66)
+		imgPlaceholder.cornerRadius = 16
+		imgPlaceholder.imageSize = new Size(64, 64)
 		// add url to open app store when app image placeholder is tapped
 		imgPlaceholder.url = 'https://apps.apple.com/ca'
 		
-		rowItem.addSpacer(10)
+		rowItem.addSpacer(14)
 		
 		iconStack = rowItem.addStack()
 		iconStack.setPadding(0, 23, 0, 0)
 		iconStack.layoutHorizontally()
 		iconStack.centerAlignContent()
-		
-		/**
-		let blankPlaceholderIconL = drawBlankIcon(23, 20)
-		let blankPlaceholderL = iconStack.addImage(blankPlaceholderIconL)
-		blankPlaceholderL.applyFittingContentMode()
-		blankPlaceholderL.leftAlignImage()
-		blankPlaceholderL.cornerRadius = 0
-		blankPlaceholderL.imageSize = new Size(23, 20)
-		**/
 
 		btnPlaceholderIcon = drawBtnPlaceholderIcon()
 		btnPlaceholder = iconStack.addImage(btnPlaceholderIcon)
@@ -312,33 +265,19 @@ do {
 		btnPlaceholder.centerAlignImage()
 		btnPlaceholder.cornerRadius = 3
 		btnPlaceholder.imageSize = new Size(20, 20)
-		
-		/**
-		let blankPlaceholderIconR = drawBlankIcon(23, 20)
-		let blankPlaceholderR = iconStack.addImage(blankPlaceholderIconR)
-		blankPlaceholderR.applyFittingContentMode()
-		blankPlaceholderR.rightAlignImage()
-		blankPlaceholderR.cornerRadius = 0
-		blankPlaceholderR.imageSize = new Size(23, 20)
-		**/
 
 	} else {
 		// else add item from wishlist
 		var req = new Request(app.artworkURL)
 		req.method = 'GET'
 		appImage = await req.loadImage()
-		//var appImg = Image.fromData(img)
 		rowAppImage = rowItem.addImage(appImage)
 		rowAppImage.applyFittingContentMode()
 		rowAppImage.centerAlignImage()
-		rowAppImage.cornerRadius = 18
+		rowAppImage.cornerRadius = 16
 		rowAppImage.imageSize = new Size(66, 66)
 		// add url to open the app store to the specified app when tapped
 		rowAppImage.url = app.storeURL
-		
-		//console.log(app.storeURL)
-		//rowAppImg.borderWidth = 3
-		//rowAppImg.borderColor = new Color('#0040B680')
 
 		rowItem.addSpacer(10)
 		
@@ -346,14 +285,12 @@ do {
 		iconStack.setPadding(0, 21, 0, 0)
 		iconStack.layoutHorizontally()
 		iconStack.centerAlignContent()
-		//var icon = SFSymbol.named('clear.fill')
 		removeBtnIcon = SFSymbol.named('xmark.square')
 		removeBtnIcon.textColor = Color.red()
 		removeBtnIcon.applyRegularWeight()
 		removeBtn = iconStack.addImage(removeBtnIcon.image)
 		removeBtn.applyFittingContentMode()
 		removeBtn.centerAlignImage()
-		//removeBtn.cornerRadius = 2
 		removeBtn.imageSize = new Size(25, 25)
 		// add the url to run the script to remove the specified app from the wishlist
 		removeBtn.url = 'scriptable:///run/WishlistWidget-RemoveItem?id=app' + app.storeID
@@ -375,7 +312,7 @@ switch(wdgtSize){
 		LW.presentLarge()
 		break
 	default:
-		
+			LW.presentLarge()
 }
 
 Script.complete()

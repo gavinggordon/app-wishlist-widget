@@ -1,6 +1,9 @@
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
+// icon-color: blue; icon-glyph: magic;
 /* 
  *
- * Wishlist Widget
+ * App Wishlist Widget
  * Author: Gavin Gordon
  * Github: www.github.com/gavinggordon
  * 
@@ -293,7 +296,7 @@ do {
 		removeBtn.centerAlignImage()
 		removeBtn.imageSize = new Size(25, 25)
 		// add the url to run the script to remove the specified app from the wishlist
-		removeBtn.url = 'scriptable:///run/WishlistWidget-RemoveItem?id=app' + app.storeID
+		removeBtn.url = 'scriptable:///run/AppWishlistWidget-Remove?id=app' + app.storeID
 	}
 	i++
 } while(i < 8)

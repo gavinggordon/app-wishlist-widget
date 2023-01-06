@@ -1,3 +1,6 @@
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
+// icon-color: blue; icon-glyph: times; share-sheet-inputs: plain-text;
 const PARAMS = args.queryParameters
 const APP_ID = PARAMS['id']
 const FM = FileManager.local()
@@ -33,5 +36,5 @@ FM.writeString(DB_FPATH, updatedwishlistjson)
 
 let alert = new Alert()
 alert.message = '"' + removedAppName + '" was removed from the App Wishlist.'
-alert.title = 'App Wishlist'
+alert.title = 'App Wishlist Widget'
 alert.present()

@@ -10,12 +10,15 @@ const SAVE_DIR_PATH = FM.joinPath(LIB_DIR, SAVE_DIR_NAME)
 const DB_FNAME = 'appwishlist_db.json'
 const DB_FPATH = FM.joinPath(SAVE_DIR_PATH, DB_FNAME)
 
-
 var wishlist
 var wishlistjson
 var removedAppName
 var updatedwishlistjson
 var updatedwishlist = {}
+let msg
+let req
+let alert
+let action
 
 if(FM.fileExists(DB_FPATH)){
 	wishlistjson = await FM.readString(DB_FPATH)
@@ -31,10 +34,22 @@ for(const [key, value] of Object.entries(wishlist)){
 	}
 }
 
-updatedwishlistjson = JSON.stringify(updatedwishlist)
-FM.writeString(DB_FPATH, updatedwishlistjson)
+if(APP_ID in updatedwishlist){
+	msg = 'Unable to remove "' + removedAppName + '" from the app wishlist.'
+} else {
+	updatedwishlistjson = JSON.stringify(updatedwishlist)
+	FM.writeString(DB_FPATH, updatedwishlistjson)
+	
+	req = new Request('shortcuts://run-shortcut?name=AppWishlistWidget-Refresh&refscript=Remove')
+	req.method = 'GET'
+	await req.load()
+	msg = '"' + removedAppName + '" was removes from the app wishlist.'
+}
 
-let alert = new Alert()
-alert.message = '"' + removedAppName + '" was removed from the App Wishlist.'
-alert.title = 'App Wishlist Widget'
-alert.present()
+alert = new Alert()
+alert.title = 'App Wishlist Widget Notice'
+alert.message = msg
+alert.addAction('Ok')
+action = alert.present()
+console.log(action)
+Script.complete()

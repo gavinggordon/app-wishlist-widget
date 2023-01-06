@@ -11,7 +11,7 @@ const SAVE_DIR_PATH = FM.joinPath(LIB_DIR, SAVE_DIR_NAME)
 const DB_FNAME = 'appwishlist_db.json'
 const DB_FPATH = FM.joinPath(SAVE_DIR_PATH, DB_FNAME)
 
-let resp
+let msg
 let wishlist
 let wishlistjson
 let updatedwishlistjson
@@ -37,9 +37,7 @@ wishlistjson = await FM.readString(DB_FPATH)
 wishlist = JSON.parse(wishlistjson)
 
 if(wishlistitemkey in wishlist){
-	resp = appname + ' has already been added to your wishlist.'
-	Script.setShortcutOutput(resp)
-	Script.complete()
+	msg = '"' + appname + '" has already been added to the app wishlist.'
 } else {
 	wishlist[wishlistitemkey] = {
 		name: appname,
@@ -51,10 +49,11 @@ if(wishlistitemkey in wishlist){
 	}
 	updatedwishlistjson = JSON.stringify(wishlist)
 	FM.writeString(DB_FPATH, updatedwishlistjson)
-	resp = appname + ' has been added to your wishlist.'
-	Script.setShortcutOutput(resp)
-	Script.complete()
+	msg = '"' + appname + '" was added to the app wishlist.'
 }
+
+Script.setShortcutOutput(msg)
+Script.complete()
 
 
 

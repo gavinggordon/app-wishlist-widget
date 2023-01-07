@@ -1,12 +1,43 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: blue; icon-glyph: magic;
+
 /* 
  *
  * App Wishlist Widget
  * Author: Gavin Gordon
- * Github: www.github.com/gavinggordon
- * 
+ * Github: https://www.github.com/gavinggordon
+ * Package: https://www.github.com/gavinggordon/app-wishlist-widget
+ * Version: 1.4.0
+ *
+ */
+ 
+/* !!!!! IMPORTANT NOTE !!!!!
+ *
+ * In order to use this widget, the listed 
+ * items (see below) are required.
+ *
+ *  Hardware:
+ *    • iPhone running iOS 15 (or above)
+ *
+ *  iPhone Apps:
+ *    • Shortcuts
+ *    • Scriptable
+ *
+ *  Shortcuts Shortcuts:
+ *    • AddAppToWishlist
+ *    • AppWishlistWidget-Refresh
+ *
+ *  Scriptable Scripts:
+ *    • AppWishlistWidget.js
+ *    • AppWishlistWidget-Add.js
+ *    • AppWishlistWidget-Remove.js
+ *
+ * The above-mentioned Shortcuts & Scripts
+ * can be found & acquired from the Github:
+ *
+ * https://www.github.com/gavinggordon/app-wishlist-widget
+ *
  */
 
 // access to the Library directory

@@ -1,23 +1,17 @@
-# README.md Template
+# README.md
 
 <a name="readme-top"></a>
 
 <br />
-<div align="center">
 
 <h3 align="center">App Wishlist Widget</h3>
 
+<div align="center">
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/gavinggordon/app-wishlist-widget"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/gavinggordon/app-wishlist-widget">View Demo</a>
-    ·
-    <a href="https://github.com/gavinggordon/app-wishlist-widget/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/gavinggordon/app-wishlist-widget/issues">Request Feature</a>
+    Interactive homescreen widget for displaying an editable list of iPhone apps.
+  </p>
+  <p align="center">
+    <a href="https://github.com/gavinggordon/app-wishlist-widget"><strong>Explore the docs »</strong></a> ◊ <a href="https://github.com/gavinggordon/app-wishlist-widget/issues">Report Bug</a> ◊ <a href="https://github.com/gavinggordon/app-wishlist-widget/issues">Request Feature</a>
   </p>
 </div>
 
@@ -28,22 +22,34 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project" title="Go to the 'About the Project' section of the 'App Wishlist Widget' repository">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with" title="Go to the 'Built With' sub-section of the 'App Wishlist Widget' repository">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
+    <li><a href="#use-cases" title="Go to the 'Use Cases' section of the 'App Wishlist Widget' repository">Use Cases</a></li>
+		<li>
+		  <a href="#prerequisites" title="Go to the 'Prerequisites' section of the 'App Wishlist Widget' repository">Prerequisites</a>
+	    <ul>
+			  <li><a href="#prerequisites-hardware" title="Go to the 'Hardware Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware</a></li>
+				<li><a href="#prerequisites-software" title="Go to the 'Software Prerequisites' sub-section of the 'App Wishlist Widget' repository">Software</a></li>
+			</ul>
+		</li>
+		<li>
+      <a href="#getting-started" title="Go to the 'Getting Started' section of the 'App Wishlist Widget' repository">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+	      <li>
+	        <a href="#installation" title="Go to the 'Installation' sub-section of the 'App Wishlist Widget' repository">Installation</a>
+	        <ul>
+		        <li><a href="#installation-shortcuts-app-shortcuts" title="Go to the 'Shortcuts Shortcuts Installation' sub-section of the 'App Wishlist Widget' repository">Scriptable App Scripts</a></li>
+		        <li><a href="#installation-scriptable-app-scripts" title="Go to the 'Scriptable Scripts Installation' sub-section of the 'App Wishlist Widget' repository">Shortcuts App Shortcuts</a></li>
+	        </ul>
+	      </li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contributing" title="Go to the 'Contributing' section of the 'App Wishlist Widget' repository">Contributing</a></li>
+    <li><a href="#license" title="Go to the 'License' section of the 'App Wishlist Widget' repository">License</a></li>
+    <li><a href="#contact" title="Go to the 'Contact' section of the 'App Wishlist Widget' repository">Contact</a></li>
   </ol>
 </details>
 
@@ -52,19 +58,47 @@
 <!-- ABOUT THE PROJECT -->
 ## <a name="about-the-project" title="The 'About the Project' section of the 'App Wishlist Widget' repository">About the Project</a>
 
-This is a homescreen widget, for iPhone, that allows you to create
-a wishlist onto which you can save
-apps from the Apple App Store to be downloaded at a later time.
-[![App Wishlist Widget][product-screenshot]](https://github.com/gavinggordon/app-wishlist-widget/AppWishlistWidget-ExampleScreenshot.png)
+This displays app icons in an interactive and editable list within a large widget on the homescreen of an iPhone running iOS 15 (or above).
 
+I designed this widget with the purpose of providing users with a uncomplicated visual interface that allows simple and fast management of a list of apps.
+
+[![App Wishlist Widget][product-screenshot]](https://github.com/gavinggordon/app-wishlist-widget/AppWishlistWidget-ExampleScreenshot.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### <a name="built-with" title="The 'Built With' section of the 'App Wishlist Widget' repository">Built With</a>
+### <a name="built-with" title="The 'Built With' sub-section of the 'App Wishlist Widget' repository">Built With</a>
 
 * JavaScript 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USE CASES-->
+## <a name="use-cases" title="The 'Use Cases' section of the 'App Wishlist Widget' repository">Use Cases</a>
+
+Perhaps you have discovered an app that you really like, but you can't afford to purchase it until next payday...
+
+Perhaps you are comparing the capabilities of several different apps, in order to find the one that will best suit your needs... 
+
+Or, perhaps you are creating a list of possible gift ideas, while searching for an app to send to a friend or a family member...
+
+So, for _whatever_ your reason might be, the **App Wishlist Widget** makes it quicker and easier, than ever before, for you to fulfilling _whatever_ you need. 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## <a name="prerequisites" title="The 'Prerequisites' section of the 'App Wishlist Widget' repository">Prerequisites</a>
+
+### <a name="prerequisites-hardware" title="The 'Hardware Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware</a>
+> - iPhone running iOS 15 (or above)
+
+### <a name="prerequisites-software" title="The 'Software Prerequisites' sub-section of the 'App Wishlist Widget' repository">Software</a>
+> - Shortcuts App
+> - Scriptable App
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -73,60 +107,33 @@ apps from the Apple App Store to be downloaded at a later time.
 <!-- GETTING STARTED -->
 ## <a name="getting-started" title="The 'Getting Started' section of the 'App Wishlist Widget' repository">Getting Started</a>
 
-In order to use this widget, there are a number of things that are required (see <a href="#prerequisites" title="Go to the 'Prerequisites' section of the 'App Wishlist Widget' repository">prerequisites</a>).
+In order to use **App Wishlist Widget**, there are a number of <a href="#prerequisites" title="Go to the 'Prerequisites' section of the 'App Wishlist Widget' repository">requirements</a>.
 
-To begin, you must add the 3 javascript documents, which I have included in this repository, to your Scriptable app, making sure that, respectively, the name of the Scriptable Script, not including the file extension, is the same name as the document.
-
-Next, you must add the 2 shortcuts to your Shortcuts app. To do this, I have provided links to each of the required shortcuts in the <a href="#installation" title="Go to the 'Installation' section of the 'App Wishlist Widget' repository">Installation section</a>.
-
+If/When those requirements have been satisfied, you can begin <a href="#installation" title="Go to the 'Installation' sub-section of the 'App Wishlist Widget' repository">installing</a> the necessary shortcuts and scripts.
+ 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### <a name="prerequisites" title="The 'Prerequisites' section of the 'App Wishlist Widget' repository">Prerequisites</a>
+### <a name="installation" title="The 'Installation' sub-section of the 'App Wishlist Widget' repository">Installation</a>
 
-#### Device
-> - iPhone running iOS 15 (or above)
+#### <a name="installation-shortcuts-app-shortcuts" title="The 'Shortcuts App Shortcuts Installation' sub-section of the 'App Wishlist Widget' repository">Shortcuts App Shortcuts</a>
 
-#### Apps
-> - Shortcuts
-> - Scriptable
-
-#### Shortcuts Shortcuts
-> - AddAppToWishlist.shortcut
-> - AppWishlistWidget-Refresh.shortcut
-
-#### Scriptable Scripts
-> - AppWishlistWidget.js
-> - AppWishlistWidget-Add.js
-> - AppWishlistWidget-Remove.js
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### <a name="installation" title="The 'Installation' section of the 'App Wishlist Widget' repository">Installation</a>
-
-#### Shortcuts Shortcuts
-
-The Shortcuts used by Shortcuts can be acquired via the following two links:
+First, you must add the necessary shortcuts to the Shortcuts App. You can acquire both of these shortcuts via the following links:
 
 - [AppWishlistWidget.shortcut](https://www.dropbox.com/s/p5g0qlofz1aok7f/AddAppToWishlist.shortcut?dl=0)
 
 - [AppWishlistWidget-Refresh.shortcut](https://www.dropbox.com/s/fhezkj2vw5ionyd/AppWishlistWidget-Refresh.shortcut?dl=0)
 
-#### Scriptable Scripts
+#### <a name="installation-scriptable-app-scripts" title="The 'Scriptable App Scripts Installation' sub-section of the 'App Wishlist Widget' repository">Scriptable App Scripts</a>
 
-- The scripts used by Scriptable are included in this repository.
+Lastly, you must add the 3 javascript documents, included within this repository, to your Scriptable App.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+*Note: It is important that you name each script in the Scriptable app the same name as the relative javascript document, excluding the file extension.*
 
-
-
-<!-- USAGE -->
-## <a name="usage" title="The 'Usage' section of the 'App Wishlist Widget' repository">Usage</a>
-
-- Will add a usage example soon.
+- AppWishlistWidget.js
+- AppWishlistWidget-Add.js
+- AppWishlistWidget-Remove.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -41,8 +41,8 @@
 	      <li>
 	        <a href="#installation" title="Go to the 'Installation' sub-section of the 'App Wishlist Widget' repository">Installation</a>
 	        <ul>
-		        <li><a href="#installation-shortcuts-app-shortcuts" title="Go to the 'Shortcuts Shortcuts Installation' sub-section of the 'App Wishlist Widget' repository">Scriptable App Scripts</a></li>
-		        <li><a href="#installation-scriptable-app-scripts" title="Go to the 'Scriptable Scripts Installation' sub-section of the 'App Wishlist Widget' repository">Shortcuts App Shortcuts</a></li>
+		        <li><a href="#installation-shortcuts-app-shortcuts" title="Go to the 'Shortcuts Shortcuts Installation' sub-section of the 'App Wishlist Widget' repository">Shortcuts App Shortcuts</a></li>
+		        <li><a href="#installation-scriptable-app-scripts" title="Go to the 'Scriptable Scripts Installation' sub-section of the 'App Wishlist Widget' repository">Scriptable App Scripts</a></li>
 	        </ul>
 	      </li>
       </ul>

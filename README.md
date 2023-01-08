@@ -2,16 +2,6 @@
 
 <a name="readme-top"></a>
 
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
 <br />
 <div align="center">
 
@@ -51,7 +41,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -61,7 +50,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## <a name="about-the-project" title="The 'About the Project' section of the 'App Wishlist Widget' repository">About the Project</a>
 
 This is a homescreen widget, for iPhone, that allows you to create
 a wishlist onto which you can save
@@ -73,19 +62,28 @@ apps from the Apple App Store to be downloaded at a later time.
 
 
 
-### Built With
+### <a name="built-with" title="The 'Built With' section of the 'App Wishlist Widget' repository">Built With</a>
 
 * JavaScript 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
 <!-- GETTING STARTED -->
-## Getting Started
+## <a name="getting-started" title="The 'Getting Started' section of the 'App Wishlist Widget' repository">Getting Started</a>
 
-In order to use this widget, the listed items (see below) are required. The Scriptable scripts are included in this package.
+In order to use this widget, there are a number of things that are required (see <a href="#prerequisites" title="Go to the 'Prerequisites' section of the 'App Wishlist Widget' repository">prerequisites</a>).
 
-### Prerequisites
+To begin, you must add the 3 javascript documents, which I have included in this repository, to your Scriptable app, making sure that, respectively, the name of the Scriptable Script, not including the file extension, is the same name as the document.
+
+Next, you must add the 2 shortcuts to your Shortcuts app. To do this, I have provided links to each of the required shortcuts in the <a href="#installation" title="Go to the 'Installation' section of the 'App Wishlist Widget' repository">Installation section</a>.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### <a name="prerequisites" title="The 'Prerequisites' section of the 'App Wishlist Widget' repository">Prerequisites</a>
 
 #### Device
 > - iPhone running iOS 15 (or above)
@@ -103,9 +101,15 @@ In order to use this widget, the listed items (see below) are required. The Scri
 > - AppWishlistWidget-Add.js
 > - AppWishlistWidget-Remove.js
 
-### Installation
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### <a name="installation" title="The 'Installation' section of the 'App Wishlist Widget' repository">Installation</a>
 
 #### Shortcuts Shortcuts
+
+The Shortcuts used by Shortcuts can be acquired via the following two links:
 
 - [AppWishlistWidget.shortcut](https://www.dropbox.com/s/p5g0qlofz1aok7f/AddAppToWishlist.shortcut?dl=0)
 
@@ -113,14 +117,14 @@ In order to use this widget, the listed items (see below) are required. The Scri
 
 #### Scriptable Scripts
 
-- are included in this repository
+- The scripts used by Scriptable are included in this repository.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- USAGE -->
+## <a name="usage" title="The 'Usage' section of the 'App Wishlist Widget' repository">Usage</a>
 
 - Will add a usage example soon.
 
@@ -129,7 +133,7 @@ In order to use this widget, the listed items (see below) are required. The Scri
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## <a name="contributing" title="The 'Contributing' section of the 'App Wishlist Widget' repository">Contributing</a>
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -147,7 +151,7 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- LICENSE -->
-## License
+## <a name="license" title="The 'License' section of the 'App Wishlist Widget' repository">License</a>
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
@@ -156,7 +160,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+## <a name="contact" title="The 'Contact' section of the 'App Wishlist Widget' repository">Contact</a>
 
 Gavin Gordon - [@GavinGGordon](https://twitter.com/GavinGGordon) - me@gavingordon.com
 
@@ -164,9 +168,10 @@ Project Link: [https://github.com/gavinggordon/app-wishlist-widget](https://gith
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[
 
 [forks-shield]: https://github.com/gavinggordon/app-wishlist-widget.svg?style=for-the-badge
 [forks-url]: https://github.com/gavinggordon/app-wishlist-widget/network/members

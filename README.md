@@ -8,10 +8,14 @@
 
 <div align="center">
   <p align="center">
-    Interactive homescreen widget for displaying an editable list of iPhone apps.
+    An interactive widget for displaying an editable list of iPhone apps on the homescreen.
   </p>
   <p align="center">
-    <a href="https://github.com/gavinggordon/app-wishlist-widget"><strong>Explore the docs »</strong></a> ◊ <a href="https://github.com/gavinggordon/app-wishlist-widget/issues">Report Bug</a> ◊ <a href="https://github.com/gavinggordon/app-wishlist-widget/issues">Request Feature</a>
+   ◊ <a href="https://github.com/gavinggordon/app-wishlist-widget"><strong>Explore the docs »</strong></a>
+    <br />
+   ◊ <a href="https://github.com/gavinggordon/app-wishlist-widget/issues">Report a Bug</a>
+    <br />
+   ◊ <a href="https://github.com/gavinggordon/app-wishlist-widget/issues">Request a Feature</a>
   </p>
 </div>
 
@@ -62,7 +66,7 @@ This displays app icons in an interactive and editable list within a large widge
 
 I designed this widget with the purpose of providing users with a uncomplicated visual interface that allows simple and fast management of a list of apps.
 
-[![App Wishlist Widget][product-screenshot]](https://github.com/gavinggordon/app-wishlist-widget/AppWishlistWidget-ExampleScreenshot.png)
+![App Wishlist Widget](https://github.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,6 +96,8 @@ So, for _whatever_ your reason might be, the **App Wishlist Widget** makes it qu
 
 
 ## <a name="prerequisites" title="The 'Prerequisites' section of the 'App Wishlist Widget' repository">Prerequisites</a>
+
+In order to utilize the **App Wishlist Widget**, there are some requirements, regarding hardware and some software. 
 
 ### <a name="prerequisites-hardware" title="The 'Hardware Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware</a>
 > - iPhone running iOS 15 (or above)
@@ -123,7 +129,11 @@ First, you must add the necessary shortcuts to the Shortcuts App. You can acquir
 
 - [AppWishlistWidget.shortcut](https://www.dropbox.com/s/p5g0qlofz1aok7f/AddAppToWishlist.shortcut?dl=0)
 
+![Add App To Wishlist Shortcut](https://github.com/gavinggordon/app-wishlist-widget/images/AddAppToWishlist-ShortcutScreenshot.png)
+
 - [AppWishlistWidget-Refresh.shortcut](https://www.dropbox.com/s/fhezkj2vw5ionyd/AppWishlistWidget-Refresh.shortcut?dl=0)
+
+![App Wishlist Widget Refresh Shortcut](https://github.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-Refresh-ShortcutScreenshot.png)
 
 #### <a name="installation-scriptable-app-scripts" title="The 'Scriptable App Scripts Installation' sub-section of the 'App Wishlist Widget' repository">Scriptable App Scripts</a>
 
@@ -175,19 +185,4 @@ Project Link: [https://github.com/gavinggordon/app-wishlist-widget](https://gith
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[forks-shield]: https://github.com/gavinggordon/app-wishlist-widget.svg?style=for-the-badge
-[forks-url]: https://github.com/gavinggordon/app-wishlist-widget/network/members
-[stars-shield]: https://github.com/gavinggordon/app-wishlist-widget.svg?style=for-the-badge
-[stars-url]: https://github.com/gavinggordon/app-wishlist-widget/stargazers
-[issues-shield]: https://github.com/gavinggordon/app-wishlist-widget.svg?style=for-the-badge
-[issues-url]: https://github.com/gavinggordon/app-wishlist-widget/issues
-[license-shield]: https://github.com/gavinggordon/app-wishlist-widget.svg?style=for-the-badge
-[license-url]: https://github.com/gavinggordon/app-wishlist-widget/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: https://github.com/gavinggordon/app-wishlist-widget/AppWishlistWidget-ExampleScreenshot.png
+[product-screenshot]: https://github.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png

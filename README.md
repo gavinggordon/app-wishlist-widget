@@ -68,8 +68,6 @@ I designed this widget with the purpose of providing users with a uncomplicated 
 
 ![App Wishlist Widget](https://github.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### <a name="built-with" title="The 'Built With' sub-section of the 'App Wishlist Widget' repository">Built With</a>
@@ -103,20 +101,27 @@ In order to utilize the **App Wishlist Widget**, there are some requirements, re
 > - iPhone running iOS 15 (or above)
 
 ### <a name="prerequisites-software" title="The 'Software Prerequisites' sub-section of the 'App Wishlist Widget' repository">Software</a>
-> - Shortcuts App
-> - Scriptable App
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+> - Shortcuts app
+> - Scriptable app
 
 
 
 <!-- GETTING STARTED -->
 ## <a name="getting-started" title="The 'Getting Started' section of the 'App Wishlist Widget' repository">Getting Started</a>
 
-In order to use **App Wishlist Widget**, there are a number of <a href="#prerequisites" title="Go to the 'Prerequisites' section of the 'App Wishlist Widget' repository">requirements</a>.
+When the above-mentioned requirements have been satisfied, begin by installing the necessary shortcuts into the Shortcuts app, by following the instructions in the <a href="#installation-shortcuts-app-shortcuts" title="Go to the 'Shortcuts Shortcuts Installation' sub-section of the 'App Wishlist Widget' repository">first sub-section</a> below.
 
-If/When those requirements have been satisfied, you can begin <a href="#installation" title="Go to the 'Installation' sub-section of the 'App Wishlist Widget' repository">installing</a> the necessary shortcuts and scripts.
- 
+_Important Note: As previously noted, remember to add the "**AddAppToWishlist**" shortcut action to the list of available actions on the ShareSheet. This can be enabled by tapping the "Add to ShareSheet" toggle-switch to the **on** position (lime-green) within the "**AddAppToWishlist**" shortcut's settings panel (tap the "toggles" icon in the bottom left corner of the shortcut flow/editing screen)._
+
+Next, add the necessary scripts to the Scriptable app, by following the instructions in the <a href="#installation-scriptable-app-scripts" title="Go to the 'Scriptable Scripts Installation' sub-section of the 'App Wishlist Widget' repository">second sub-section</a> below.
+
+Lastly, go ahead and add a large widget to your homescreen, and select  "AppWishlistWidget" as the Scriptable script that the widget will use.
+
+To add an app to the wishlist:
+1. Open the Apple App Store
+2. Find an app that you like
+3. Tap the "share" icon located near the top of the app's 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -125,25 +130,25 @@ If/When those requirements have been satisfied, you can begin <a href="#installa
 
 #### <a name="installation-shortcuts-app-shortcuts" title="The 'Shortcuts App Shortcuts Installation' sub-section of the 'App Wishlist Widget' repository">Shortcuts App Shortcuts</a>
 
-First, you must add the necessary shortcuts to the Shortcuts App. You can acquire both of these shortcuts via the following links:
-
-- [AppWishlistWidget.shortcut](https://www.dropbox.com/s/p5g0qlofz1aok7f/AddAppToWishlist.shortcut?dl=0)
+First, you must add the necessary shortcuts to the Shortcuts app. You can acquire both of these shortcuts via the following 2 links:
 
 ![Add App To Wishlist Shortcut](https://github.com/gavinggordon/app-wishlist-widget/images/AddAppToWishlist-ShortcutScreenshot.png)
+1. [AppWishlistWidget.shortcut](https://www.dropbox.com/s/p5g0qlofz1aok7f/AddAppToWishlist.shortcut?dl=0)
 
-- [AppWishlistWidget-Refresh.shortcut](https://www.dropbox.com/s/fhezkj2vw5ionyd/AppWishlistWidget-Refresh.shortcut?dl=0)
+_Important Note: As previously noted, remember to add the "**AddAppToWishlist**" shortcut action to the list of available actions on the ShareSheet. This can be enabled by tapping the "Add to ShareSheet" toggle-switch to the **on** position (lime-green) within the "**AddAppToWishlist**" shortcut's settings panel (tap the "toggles" icon in the bottom left corner of the shortcut flow/editing screen)._
 
 ![App Wishlist Widget Refresh Shortcut](https://github.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-Refresh-ShortcutScreenshot.png)
+2. [AppWishlistWidget-Refresh.shortcut](https://www.dropbox.com/s/fhezkj2vw5ionyd/AppWishlistWidget-Refresh.shortcut?dl=0)
 
 #### <a name="installation-scriptable-app-scripts" title="The 'Scriptable App Scripts Installation' sub-section of the 'App Wishlist Widget' repository">Scriptable App Scripts</a>
 
-Lastly, you must add the 3 javascript documents, included within this repository, to your Scriptable App.
+Lastly, you must add the 3 javascript documents, included within this repository, to your Scriptable app.
 
 *Note: It is important that you name each script in the Scriptable app the same name as the relative javascript document, excluding the file extension.*
 
-- AppWishlistWidget.js
-- AppWishlistWidget-Add.js
-- AppWishlistWidget-Remove.js
+1. AppWishlistWidget.js
+2. AppWishlistWidget-Add.js
+3. AppWishlistWidget-Remove.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

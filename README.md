@@ -66,7 +66,7 @@ This displays app icons in an interactive and editable list within a large widge
 
 I designed this widget with the purpose of providing users with a uncomplicated visual interface that allows simple and fast management of a list of apps.
 
-![App Wishlist Widget](https://github.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png)
+![App Wishlist Widget](/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png)
 
 
 
@@ -132,12 +132,14 @@ To add an app to the wishlist:
 
 First, you must add the necessary shortcuts to the Shortcuts app. You can acquire both of these shortcuts via the following 2 links:
 
-![Add App To Wishlist Shortcut](https://github.com/gavinggordon/app-wishlist-widget/images/AddAppToWishlist-ShortcutScreenshot.png)
+![Add App To Wishlist Shortcut](/gavinggordon/app-wishlist-widget/images/AddAppToWishlist-ShortcutScreenshot.png)
+
 1. [AppWishlistWidget.shortcut](https://www.dropbox.com/s/p5g0qlofz1aok7f/AddAppToWishlist.shortcut?dl=0)
 
 _Important Note: As previously noted, remember to add the "**AddAppToWishlist**" shortcut action to the list of available actions on the ShareSheet. This can be enabled by tapping the "Add to ShareSheet" toggle-switch to the **on** position (lime-green) within the "**AddAppToWishlist**" shortcut's settings panel (tap the "toggles" icon in the bottom left corner of the shortcut flow/editing screen)._
 
-![App Wishlist Widget Refresh Shortcut](https://github.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-Refresh-ShortcutScreenshot.png)
+![App Wishlist Widget Refresh Shortcut](gavinggordon/app-wishlist-widget/images/AppWishlistWidget-Refresh-ShortcutScreenshot.png)
+
 2. [AppWishlistWidget-Refresh.shortcut](https://www.dropbox.com/s/fhezkj2vw5ionyd/AppWishlistWidget-Refresh.shortcut?dl=0)
 
 #### <a name="installation-scriptable-app-scripts" title="The 'Scriptable App Scripts Installation' sub-section of the 'App Wishlist Widget' repository">Scriptable App Scripts</a>
@@ -190,4 +192,4 @@ Project Link: [https://github.com/gavinggordon/app-wishlist-widget](https://gith
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[product-screenshot]: https://github.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png
+[product-screenshot]: /gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png

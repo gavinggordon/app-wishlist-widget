@@ -68,8 +68,6 @@ This displays app icons in an interactive and editable list within a large widge
 
 I designed this widget with the purpose of providing users with a uncomplicated visual interface that allows simple and fast management of a list of apps.
 
-  ![App Wishlist Widget](images/AppWishlistWidget-ExampleScreenshot.png)
-
 ### <a name="built-with" title="The 'Built With' sub-section of the 'App Wishlist Widget' repository">Built With</a>
 
 * JavaScript 
@@ -132,13 +130,13 @@ To add an app to the wishlist:
 
 First, you must add the necessary shortcuts to the Shortcuts app. You can acquire both of these shortcuts via the following 2 links:
 
-![Add App To Wishlist Shortcut](/gavinggordon/app-wishlist-widget/images/AddAppToWishlist-ShortcutScreenshot.png)
+![Add App To Wishlist Shortcut Screenshot](images/AddAppToWishlist-ShortcutScreenshot.png "AddAppToWishlist shortcut Screenshot")
 
 1. [AppWishlistWidget.shortcut](https://www.dropbox.com/s/p5g0qlofz1aok7f/AddAppToWishlist.shortcut?dl=0)
 
 _Important Note: As previously noted, remember to add the "**AddAppToWishlist**" shortcut action to the list of available actions on the ShareSheet. This can be enabled by tapping the "Add to ShareSheet" toggle-switch to the **on** position (lime-green) within the "**AddAppToWishlist**" shortcut's settings panel (tap the "toggles" icon in the bottom left corner of the shortcut flow/editing screen)._
 
-![App Wishlist Widget Refresh Shortcut](gavinggordon/app-wishlist-widget/images/AppWishlistWidget-Refresh-ShortcutScreenshot.png)
+![App Wishlist Widget Refresh Shortcut](images/AppWishlistWidget-Refresh-ShortcutScreenshot.png "AppWishlistWidget-Refresh shortcut Screenshot")
 
 2. [AppWishlistWidget-Refresh.shortcut](https://www.dropbox.com/s/fhezkj2vw5ionyd/AppWishlistWidget-Refresh.shortcut?dl=0)
 

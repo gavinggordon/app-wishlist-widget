@@ -7,6 +7,8 @@
 <h3 align="center">App Wishlist Widget</h3>
 
 <div align="center">
+	<img src="images/AppWishlistWidget-ExampleScreenshot.png" title="Example image" alt="Example Screenshot" align="center"/>
+
   <p align="center">
     An interactive widget for displaying an editable list of iPhone apps on the homescreen.
   </p>
@@ -66,11 +68,7 @@ This displays app icons in an interactive and editable list within a large widge
 
 I designed this widget with the purpose of providing users with a uncomplicated visual interface that allows simple and fast management of a list of apps.
 
-![App Wishlist Widget](https://raw.githubusercontent.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png)
-
-<img src="https://raw.githubusercontent.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png" title="Example Image" alt="example"/>
-
-
+  ![App Wishlist Widget](images/AppWishlistWidget-ExampleScreenshot.png)
 
 ### <a name="built-with" title="The 'Built With' sub-section of the 'App Wishlist Widget' repository">Built With</a>
 

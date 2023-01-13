@@ -66,7 +66,9 @@ This displays app icons in an interactive and editable list within a large widge
 
 I designed this widget with the purpose of providing users with a uncomplicated visual interface that allows simple and fast management of a list of apps.
 
-![App Wishlist Widget](/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png)
+![App Wishlist Widget](https://raw.githubusercontent.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png)
+
+<img src="https://raw.githubusercontent.com/gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png" title="Example Image" alt="example"/>
 
 
 

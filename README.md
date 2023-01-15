@@ -7,8 +7,6 @@
 <h3 align="center">App Wishlist Widget <small>ver. 2.0.0</small></h3>
 
 <div align="center">
-	<img src="images/AppWishlistWidget-ExampleScreenshot.png" title="Example Screenshot Image" alt="Example Screenshot" align="center"/>
-
   <p align="center">
     An interactive widget for displaying an editable list of iPhone apps on the homescreen.
   </p>
@@ -21,7 +19,11 @@
   </p>
 </div>
 
+<div align="center">
+	<img src="images/AppWishlistWidget-ExampleScreenshot.png" title="Example Image of AppWishlistWidget Running on Homescreen of iPhone 14 Pro Max" alt="Screenshot of AppWishlistWidget on iPhone 14 Pro Max Homescreen" align="center"/>
+</div>
 
+<hr /> 
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -37,8 +39,8 @@
 		<li>
 		  <a href="#prerequisites" title="Go to the 'Prerequisites' section of the 'App Wishlist Widget' repository">Prerequisites</a>
 	    <ul>
-			  <li><a href="#prerequisites-hardware" title="Go to the 'Hardware Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware (Device)</a></li>
-				<li><a href="#prerequisites-software" title="Go to the 'Software Prerequisites' sub-section of the 'App Wishlist Widget' repository">Software (Apps)</a></li>
+			  <li><a href="#prerequisites-hardware" title="Go to the 'Hardware (Device) Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware (Device)</a></li>
+				<li><a href="#prerequisites-software" title="Go to the 'Software (Apps) Prerequisites' sub-section of the 'App Wishlist Widget' repository">Software (Apps)</a></li>
 			</ul>
 		</li>
 		<li>
@@ -95,10 +97,10 @@ So, for _whatever_ your reason might be, the **App Wishlist Widget** makes it qu
 
 In order for this widget to work, there are specific device and app requirements.
 
-### <a name="prerequisites-hardware" title="The 'Hardware Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware</a>
+### <a name="prerequisites-hardware" title="The 'Hardware (Device) Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware (Device)</a>
 > - iPhone running iOS 15 (or above)
 
-### <a name="prerequisites-software" title="The 'Software Prerequisites' sub-section of the 'App Wishlist Widget' repository">Software</a>
+### <a name="prerequisites-software" title="The 'Software (Apps) Prerequisites' sub-section of the 'App Wishlist Widget' repository">Software (Apps)</a>
 > - Shortcuts app
 > - Scriptable app
 
@@ -143,14 +145,14 @@ _Important Note: As previously noted, remember to add the "**AddAppToWishlist**"
 
 #### <a name="installation-scriptable-app-scripts" title="The 'Scriptable App Scripts Installation' sub-section of the 'App Wishlist Widget' repository">Scriptable App Scripts</a>
 
-Lastly, you must add the 4 javascript documents, included within this repository, to your Scriptable app.
+Lastly, you must add the following 4 javascript documents, included within this repository, to your Scriptable app: 
+
+1. [AppWishlistWidget.js](AppWishlistWidget.js)
+2. [AppWishlistWidget-Add.js](AppWishlistWidget-Add.js)
+3. [AppWishlistWidget-Remove.js](AppWishlistWidget-Remove.js)
+4. [AppWishlistWidget-Settings.js](AppWishlistWidget-Settings.js)
 
 *Note: It is important that you name each script in the Scriptable app the same name as the relative javascript document, excluding the file extension.*
-
-1. AppWishlistWidget.js
-2. AppWishlistWidget-Add.js
-3. AppWishlistWidget-Remove.js
-4. AppWishlistWidget-Settings.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

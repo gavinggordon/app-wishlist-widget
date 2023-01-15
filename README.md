@@ -4,10 +4,10 @@
 
 <br />
 
-<h3 align="center">App Wishlist Widget</h3>
+<h3 align="center">App Wishlist Widget <small>ver. 2.0.0</small></h3>
 
 <div align="center">
-	<img src="images/AppWishlistWidget-ExampleScreenshot.png" title="Example image" alt="Example Screenshot" align="center"/>
+	<img src="images/AppWishlistWidget-ExampleScreenshot.png" title="Example Screenshot Image" alt="Example Screenshot" align="center"/>
 
   <p align="center">
     An interactive widget for displaying an editable list of iPhone apps on the homescreen.
@@ -37,8 +37,8 @@
 		<li>
 		  <a href="#prerequisites" title="Go to the 'Prerequisites' section of the 'App Wishlist Widget' repository">Prerequisites</a>
 	    <ul>
-			  <li><a href="#prerequisites-hardware" title="Go to the 'Hardware Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware</a></li>
-				<li><a href="#prerequisites-software" title="Go to the 'Software Prerequisites' sub-section of the 'App Wishlist Widget' repository">Software</a></li>
+			  <li><a href="#prerequisites-hardware" title="Go to the 'Hardware Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware (Device)</a></li>
+				<li><a href="#prerequisites-software" title="Go to the 'Software Prerequisites' sub-section of the 'App Wishlist Widget' repository">Software (Apps)</a></li>
 			</ul>
 		</li>
 		<li>
@@ -93,7 +93,7 @@ So, for _whatever_ your reason might be, the **App Wishlist Widget** makes it qu
 
 ## <a name="prerequisites" title="The 'Prerequisites' section of the 'App Wishlist Widget' repository">Prerequisites</a>
 
-In order to utilize the **App Wishlist Widget**, there are some requirements, regarding hardware and some software. 
+In order for this widget to work, there are specific device and app requirements.
 
 ### <a name="prerequisites-hardware" title="The 'Hardware Prerequisites' sub-section of the 'App Wishlist Widget' repository">Hardware</a>
 > - iPhone running iOS 15 (or above)
@@ -130,25 +130,27 @@ To add an app to the wishlist:
 
 First, you must add the necessary shortcuts to the Shortcuts app. You can acquire both of these shortcuts via the following 2 links:
 
-![Add App To Wishlist Shortcut Screenshot](images/AddAppToWishlist-ShortcutScreenshot.png "AddAppToWishlist shortcut Screenshot")
+1. [AddAppToWishlist.shortcut](https://www.dropbox.com/s/p5g0qlofz1aok7f/AddAppToWishlist.shortcut?dl=0 "AddAppToWishlist Shortcut")
 
-1. [AppWishlistWidget.shortcut](https://www.dropbox.com/s/p5g0qlofz1aok7f/AddAppToWishlist.shortcut?dl=0)
+![AddAppToWishlist.shortcut Screenshot](images/AddAppToWishlist-ShortcutScreenshot.png "AddAppToWishlist Shortcut Screenshot")
 
 _Important Note: As previously noted, remember to add the "**AddAppToWishlist**" shortcut action to the list of available actions on the ShareSheet. This can be enabled by tapping the "Add to ShareSheet" toggle-switch to the **on** position (lime-green) within the "**AddAppToWishlist**" shortcut's settings panel (tap the "toggles" icon in the bottom left corner of the shortcut flow/editing screen)._
 
-![App Wishlist Widget Refresh Shortcut](images/AppWishlistWidget-Refresh-ShortcutScreenshot.png "AppWishlistWidget-Refresh shortcut Screenshot")
 
-2. [AppWishlistWidget-Refresh.shortcut](https://www.dropbox.com/s/fhezkj2vw5ionyd/AppWishlistWidget-Refresh.shortcut?dl=0)
+2. [AppWishlistWidget-Refresh.shortcut](https://www.dropbox.com/s/fhezkj2vw5ionyd/AppWishlistWidget-Refresh.shortcut?dl=0 "AppWishlistWidget-Refresh Shortcut")
+
+![AppWishlistWidget-Refresh.shortcut Screenshot](images/AppWishlistWidget-Refresh-ShortcutScreenshot.png "AppWishlistWidget-Refresh Shortcut Screenshot")
 
 #### <a name="installation-scriptable-app-scripts" title="The 'Scriptable App Scripts Installation' sub-section of the 'App Wishlist Widget' repository">Scriptable App Scripts</a>
 
-Lastly, you must add the 3 javascript documents, included within this repository, to your Scriptable app.
+Lastly, you must add the 4 javascript documents, included within this repository, to your Scriptable app.
 
 *Note: It is important that you name each script in the Scriptable app the same name as the relative javascript document, excluding the file extension.*
 
 1. AppWishlistWidget.js
 2. AppWishlistWidget-Add.js
 3. AppWishlistWidget-Remove.js
+4. AppWishlistWidget-Settings.js
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,10 +186,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## <a name="contact" title="The 'Contact' section of the 'App Wishlist Widget' repository">Contact</a>
 
-Gavin Gordon - [@GavinGGordon](https://twitter.com/GavinGGordon) - me@gavingordon.com
+Twitter - [@GavinGGordon](https://twitter.com/GavinGGordon)
+E-Mail — [me@gavingordon.com](mailto:me@gavingordon.com?subject=App%20Wishlist%20Widget%20GitHub%20Repo)
 
 Project Link: [https://github.com/gavinggordon/app-wishlist-widget](https://github.com/gavinggordon/app-wishlist-widget)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-[product-screenshot]: /gavinggordon/app-wishlist-widget/images/AppWishlistWidget-ExampleScreenshot.png
+[product-screenshot]: images/AppWishlistWidget-ExampleScreenshot.png

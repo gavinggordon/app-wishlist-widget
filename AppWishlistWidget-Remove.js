@@ -1,14 +1,20 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: blue; icon-glyph: times; share-sheet-inputs: plain-text;
+
+/* 
+ *
+ * Name: App Wishlist Widget
+ * Repo: app-wishlist-widget
+ * File: AppWishlistWidget-Remove.js
+ * Version: 2.0.0
+ * Author: Gavin Gordon
+ * Github: https://github.com/gavinggordon
+ * 
+ */
+const WIDGET = importModule('AppWishlistWidget-Settings')
 const PARAMS = args.queryParameters
 const APP_ID = PARAMS['id']
-const FM = FileManager.local()
-const LIB_DIR = FM.libraryDirectory()
-const SAVE_DIR_NAME = 'appwishlistwidget'
-const SAVE_DIR_PATH = FM.joinPath(LIB_DIR, SAVE_DIR_NAME)
-const DB_FNAME = 'appwishlist_db.json'
-const DB_FPATH = FM.joinPath(SAVE_DIR_PATH, DB_FNAME)
 
 var wishlist
 var wishlistjson
@@ -20,8 +26,8 @@ let req
 let alert
 let action
 
-if(FM.fileExists(DB_FPATH)){
-	wishlistjson = await FM.readString(DB_FPATH)
+if(WIDGET.FM.fileExists(WIDGET.DB_FPATH)){
+	wishlistjson = await WIDGET.FM.readString(WIDGET.DB_FPATH)
 }
 
 wishlist = JSON.parse(wishlistjson)
@@ -38,18 +44,17 @@ if(APP_ID in updatedwishlist){
 	msg = 'Unable to remove "' + removedAppName + '" from the app wishlist.'
 } else {
 	updatedwishlistjson = JSON.stringify(updatedwishlist)
-	FM.writeString(DB_FPATH, updatedwishlistjson)
+	WIDGET.FM.writeString(WIDGET.DB_FPATH, updatedwishlistjson)
 	
-	req = new Request('shortcuts://run-shortcut?name=AppWishlistWidget-Refresh&refscript=Remove')
+	req = new Request(WIDGET.SHORTCUTS_REFRESH_SHORTCUT_URL)
 	req.method = 'GET'
 	await req.load()
 	msg = '"' + removedAppName + '" was removes from the app wishlist.'
 }
 
 alert = new Alert()
-alert.title = 'App Wishlist Widget Notice'
+alert.title = WIDGET.TITLE + ' Notice'
 alert.message = msg
 alert.addAction('Ok')
 action = alert.present()
-console.log(action)
 Script.complete()

@@ -1,15 +1,21 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: blue; icon-glyph: plus;
+
+/* 
+ *
+ * Name: App Wishlist Widget
+ * Repo: app-wishlist-widget
+ * File: AppWishlistWidget-Add.js
+ * Version: 2.0.0
+ * Author: Gavin Gordon
+ * Github: https://github.com/gavinggordon
+ * 
+ */
+const WIDGET = importModule('AppWishlistWidget-Settings')
+
 // get input data
 const PARAM_DATA = args.shortcutParameter
-
-const FM = FileManager.local()
-const LIB_DIR = FM.libraryDirectory()
-const SAVE_DIR_NAME = 'appwishlistwidget'
-const SAVE_DIR_PATH = FM.joinPath(LIB_DIR, SAVE_DIR_NAME)
-const DB_FNAME = 'appwishlist_db.json'
-const DB_FPATH = FM.joinPath(SAVE_DIR_PATH, DB_FNAME)
 
 let msg
 let wishlist
@@ -26,14 +32,14 @@ let formattedprice = PARAM_DATA.formattedPrice
 // the key of the entry that holds the app info
 let wishlistitemkey = 'app' + storeid
 
-if(!FM.fileExists(SAVE_DIR_PATH) || !FM.isDirectory(SAVE_DIR_PATH)){
-		FM.createDirectory(SAVE_DIR_PATH)
+if(!WIDGET.FM.fileExists(WIDGET.SAVE_DIR_PATH) || !WIDGET.FM.isDirectory(WIDGET.SAVE_DIR_PATH)){
+		WIDGET.FM.createDirectory(WIDGET.SAVE_DIR_PATH)
 }
-if(!FM.fileExists(DB_FPATH)){
-		FM.writeString(DB_FPATH, '{}')
+if(!WIDGET.FM.fileExists(WIDGET.DB_FPATH)){
+		WIDGET.FM.writeString(WIDGET.DB_FPATH, '{}')
 }
 
-wishlistjson = await FM.readString(DB_FPATH)
+wishlistjson = await WIDGET.FM.readString(WIDGET.DB_FPATH)
 wishlist = JSON.parse(wishlistjson)
 
 if(wishlistitemkey in wishlist){
@@ -48,7 +54,7 @@ if(wishlistitemkey in wishlist){
 		formattedPrice: formattedprice
 	}
 	updatedwishlistjson = JSON.stringify(wishlist)
-	FM.writeString(DB_FPATH, updatedwishlistjson)
+	WIDGET.FM.writeString(WIDGET.DB_FPATH, updatedwishlistjson)
 	msg = '"' + appname + '" was added to the app wishlist.'
 }
 

@@ -1,15 +1,16 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
-// icon-color: blue; icon-glyph: magic;
+// icon-color: blue; icon-glyph: screwdriver;
 
 /* 
  *
- * App Wishlist Widget
+ * Name: App Wishlist Widget
+ * Repo: app-wishlist-widget
+ * File: AppWishlistWidget.js
+ * Version: 2.0.0
  * Author: Gavin Gordon
- * Github: https://www.github.com/gavinggordon
- * Package: https://www.github.com/gavinggordon/app-wishlist-widget
- * Version: 1.4.0
- *
+ * Github: https://github.com/gavinggordon
+ * 
  */
  
 /* !!!!! IMPORTANT NOTE !!!!!
@@ -32,75 +33,48 @@
  *    • AppWishlistWidget.js
  *    • AppWishlistWidget-Add.js
  *    • AppWishlistWidget-Remove.js
+ *    • AppWishlistWidget-Settings.js
  *
  * The above-mentioned Shortcuts & Scripts
  * can be found & acquired from the Github:
  *
- * https://www.github.com/gavinggordon/app-wishlist-widget
+ * https://github.com/gavinggordon/app-wishlist-widget
  *
  */
 
-// access to the Library directory
-const FM = FileManager.local()
-const LIB_DIR = FM.libraryDirectory()
-// the directory containing the save file
-const SAVE_DIR_NAME = 'appwishlistwidget'
-const SAVE_DIR_PATH = FM.joinPath(LIB_DIR, SAVE_DIR_NAME)
-// the name and path of the save file
-const DB_FNAME = 'appwishlist_db.json'
-const DB_FPATH = FM.joinPath(SAVE_DIR_PATH, DB_FNAME)
-
-// setting theme colours
-const COLOR1 = new Color('#FFFFFF')
-const COLOR2 = new Color('#0040B6')
-const COLOR3 = new Color('#0036AC')
-const COLOR4 = new Color('#002CA2')
-const COLOR5 = new Color('#002298')
-const COLOR6 = new Color('#00168E')
-const COLOR7 = new Color('#000000')
-
-let wdgtSize = widgetSize('large')
-let wishlistjson = "{}"
-
-function widgetSize(size){
-	let sizes = {
-		large: 1137,
-		medium: 1080,
-		small: 507	
-	}
-	if (typeof sizes[size] == 'number' && sizes[size] > 0) {
-		return sizes[size] / 3
-	}
-	return null
-}
+const WIDGET = importModule('AppWishlistWidget-Settings')
 
 // if savefile doesn't exist, create it
-if(!FM.fileExists(DB_FPATH)){
-	FM.writeString(DB_PATH, JSON.stringify({}))
+if(!WIDGET.FM.fileExists(WIDGET.DB_FPATH)){
+	WIDGET.FM.writeString(WIDGET.DB_PATH, JSON.stringify({}))
 }
+
 // get save file content
-wishlistjson = await FM.readString(DB_FPATH)
+let wishlistjson = await WIDGET.FM.readString(WIDGET.DB_FPATH)
+
 // parse json into object
 let wishlist = JSON.parse(wishlistjson)
 let appsIDs = []
 let appsData = []
+
 // iterate over items, pushing IDs and each item's Data into seperate arrays
 for(const [key, value] of Object.entries(wishlist)){
 	appsIDs.push(key)
 	appsData.push(value)
 }
 
-// begin creating the Widget
-let LW = new ListWidget()
+let WC = WIDGET.CONTAINER
 
-let widgetContainer = LW.addStack()
-widgetContainer.layoutHorizontally()
-widgetContainer.centerAlignContent()
-widgetContainer.size = new Size(wdgtSize, wdgtSize)
-widgetContainer.spacing = 0
-widgetContainer.setPadding(0, 0, 0, 0)
+let wdgtSize = WIDGET.SIZE
 
-let mainColumn = widgetContainer.addStack()
+let wdgt = WC.addStack()
+wdgt.layoutHorizontally()
+wdgt.centerAlignContent()
+wdgt.size = new Size(wdgtSize, wdgtSize)
+wdgt.spacing = 0
+wdgt.setPadding(0, 0, 0, 0)
+
+let mainColumn = wdgt.addStack()
 mainColumn.layoutVertically()
 mainColumn.centerAlignContent()
 mainColumn.size = new Size(wdgtSize, wdgtSize)
@@ -110,57 +84,65 @@ mainColumn.setPadding(0, 0, 0, 0)
 // refresh the widget every # minutes
 let minsToRefresh = 60
 const refreshInterval = Date.now() + ((60 * 1000) * minsToRefresh)
-LW.refreshAfterDate = new Date(refreshInterval)
+WC.refreshAfterDate = new Date(refreshInterval)
 
 let bgGradient = new LinearGradient()
 bgGradient.colors = [
-	COLOR2,
-	COLOR3,
-	COLOR4,
-	COLOR5,
-	COLOR6
+	WIDGET.COLOR2,
+	WIDGET.COLOR3,
+	WIDGET.COLOR4,
+	WIDGET.COLOR5,
+	WIDGET.COLOR6
 ]
 bgGradient.locations = [
 	-0.0, 0.25, 0.5, 0.75, 1.0
 ]
 bgGradient.startPoint = new Point(0.5, 0.0)
 bgGradient.endPoint = new Point(0.5, 1.0)
-LW.backgroundGradient = bgGradient
+WC.backgroundGradient = bgGradient
 
 let titleStack = mainColumn.addStack()
 titleStack.layoutHorizontally()
 titleStack.centerAlignContent()
 titleStack.size = new Size(wdgtSize, 76)
 
-let title = titleStack.addText('App Wishlist')
+let title = titleStack.addText(WIDGET.TITLE)
 title.centerAlignText()
-title.textColor = COLOR1
-title.font = new Font('Didot-italic', 54)
+title.textColor = Color.white()
+title.font = new Font('SnellRoundhand', 64)
+/**
+title.shadowColor = Color.black()
+title.shadowOffset = new Point(-1.5, 0.0)
+title.shadowRadius = 1
+**/
 
 let hrStack = mainColumn.addStack()
 hrStack.layoutHorizontally()
 hrStack.centerAlignContent()
-hrStack.size = new Size(wdgtSize, 4)
+hrStack.size = new Size(wdgtSize, 8)
 
 let hr = hrStack.addStack()
-hr.size = new Size(wdgtSize-54, 3)
-hr.borderColor = Color.white()
+hr.size = new Size(wdgtSize-54, 8)
+hr.borderColor = WIDGET.COLOR3
 hr.borderWidth = 1
 
 let hrGradient = new LinearGradient()
 hrGradient.colors = [
-	Color.white(),
-	COLOR6,
-	Color.white()
+	new Color('#EEEEEE75'),
+	WIDGET.COLOR2,
+	WIDGET.COLOR3,
+	WIDGET.COLOR4,
+	WIDGET.COLOR5,
+	WIDGET.COLOR6,
+	new Color('#00000090')
 ]
 hrGradient.locations = [
-	-0.0, 0.5, 1.0
+	0.0, 0.15, 0.30, 0.6, 0.8, 0.9, 1.0
 ]
-hrGradient.startPoint = new Point(0.5, -0.0)
+hrGradient.startPoint = new Point(0.5, 0.0)
 hrGradient.endPoint = new Point(0.5, 1.0)
 hr.backgroundGradient = hrGradient
 
-//rowsStack.addSpacer(10)
 let rowWidth = wdgtSize - 10
 let rowHeight = 91 + 30
 let rowItemWidth = (rowWidth / 4) - 10
@@ -327,26 +309,26 @@ do {
 		removeBtn.centerAlignImage()
 		removeBtn.imageSize = new Size(25, 25)
 		// add the url to run the script to remove the specified app from the wishlist
-		removeBtn.url = 'scriptable:///run/AppWishlistWidget-Remove?id=app' + app.storeID
+		removeBtn.url = WIDGET.SCRIPTABLE_REMOVE_ENTRY_URL + app.storeID
 	}
 	i++
 } while(i < 8)
 
-Script.setWidget(LW)
+Script.setWidget(WC)
 
 // presents the widget, based on defined size
-switch(wdgtSize){
-	case widgetSize('small'):
-		LW.presentSmall()
+switch(WIDGET.TYPE){
+	case 'SMALL':
+		WC.presentSmall()
 		break
-	case widgetSize('medium'):
-		LW.presentMedium()
+	case 'MEDIUM':
+		WC.presentMedium()
 		break
-	case widgetSize('large'):
-		LW.presentLarge()
+	case 'LARGE':
+		WC.presentLarge()
 		break
 	default:
-			LW.presentLarge()
+			WC.presentLarge()
 }
 
 Script.complete()

@@ -12,7 +12,7 @@
  * Github: https://github.com/gavinggordon
  * 
  */
- 
+
 /* !!!!! IMPORTANT NOTE !!!!!
  *
  * In order to use this widget, the listed 
@@ -200,26 +200,34 @@ function drawImgPlaceholderIcon(){
 }
 
 // create a placeholder icon for the remove button
-function drawBtnPlaceholderIcon(){
+function drawBtnPlaceholderIcon(i){
 	let ctxSm = new DrawContext()
 	ctxSm.size = new Size(20, 20)
-	ctxSm.setFillColor(new Color('#041E94'))
-	ctxSm.setStrokeColor(new Color('#BBBBBB75'))
+	if(i < 4){
+		ctxSm.setFillColor(new Color('#0029A0'))
+	} else {
+		ctxSm.setFillColor(new Color('#021992'))
+	}
+	ctxSm.setStrokeColor(new Color('#BBBBBB00'))
 	ctxSm.setLineWidth(3)
 	let rndRectSmallBG = new Path()
 	rndRectSmallBG.move(new Point(0, 0))
-	rndRectSmallBG.addRoundedRect(new Rect(0, 0, 20, 20), 3, 3)
+	rndRectSmallBG.addRoundedRect(new Rect(0, 0, 20, 20), 0, 0)
 	ctxSm.addPath(rndRectSmallBG)
 	ctxSm.fillPath()
-	ctxSm.setFillColor(new Color('#041E94'))
-	ctxSm.setStrokeColor(new Color('#BBBBBB75'))
+	if(i < 4){
+		ctxSm.setFillColor(new Color('#0029A0'))
+	} else {
+		ctxSm.setFillColor(new Color('#021992'))
+	}
+	ctxSm.setStrokeColor(new Color('#BBBBBB00'))
 	ctxSm.setLineWidth(4)
 	let rndRectSmall = new Path()
 	rndRectSmall.move(new Point(0, 0))
-	rndRectSmall.addRoundedRect(new Rect(0, 0, 20, 20), 3, 3)
+	rndRectSmall.addRoundedRect(new Rect(0, 0, 20, 20), 0, 0)
 	ctxSm.addPath(rndRectSmall)
 	ctxSm.strokePath()
-	ctxSm.setStrokeColor(new Color('#BBBBBB75'))
+	ctxSm.setStrokeColor(new Color('#BBBBBB00'))
 	ctxSm.setLineWidth(2)
 	
 	let forwardSlash = new Path()
@@ -275,7 +283,7 @@ do {
 		iconStack.layoutHorizontally()
 		iconStack.centerAlignContent()
 
-		btnPlaceholderIcon = drawBtnPlaceholderIcon()
+		btnPlaceholderIcon = drawBtnPlaceholderIcon(i)
 		btnPlaceholder = iconStack.addImage(btnPlaceholderIcon)
 		btnPlaceholder.applyFillingContentMode()
 		btnPlaceholder.centerAlignImage()
